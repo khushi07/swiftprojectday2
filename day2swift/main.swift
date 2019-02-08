@@ -24,3 +24,7 @@ str="hello World"
 var p:String
 p="Call me"
 print(p,str,s)
+print(str.hasPrefix("hello"))
+print(str.hasSuffix("me"))
+print(str.description)
+print(s.count)

@@ -16,3 +16,11 @@ print("Hello, World!")
  print("thanks")
  }
  */
+var s:String="hello"
+//print(s)
+var str=String()
+str="hello World"
+//print(str)
+var p:String
+p="Call me"
+print(p,str,s)

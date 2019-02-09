@@ -69,7 +69,7 @@ if(y.contains(50))
 }else{
 print("false")
 }
-*/
+
 
 
 var a=[10,20,30,40,50]
@@ -124,6 +124,103 @@ print(y)
 var z = Array<Int>()
 z.append(5000)
 print(z[0])
+*/
+var x0 = [1,2,3,4,5]
+var y0 = Array(repeating: 0, count: x0.count) //another way to initialise an array
+for i in 0..<x0.count
+{
+    var t = 1
+    for j in 0..<x0.count{
+        if(j != i)
+        {
+            t *= x0[j]
+        }
+    }
+    y0[i] = t
+}
+print(x0)
+print(y0)
+
+//set example
+print("\n--- Set Data Structure")
+
+var s1 = Set<String>()
+s1.insert("Canada")
+s1.insert("USA")
+s1.insert("India")
+s1.insert("Russia")
+s1.insert("Brazil")
+s1.insert("China")
+
+print(s1)
+
+//will not insert
+s1.insert("India")
+print(s1)
+
+//will insert
+s1.insert("india")
+print(s1)
+
+//dictionary
+//1 is key and abc is value
+var d = [1:"Abc",
+         2:"Hello"]
+print("\n---Dictionary Example")
+print(d)
+
+//add any key with value
+d[3] = "Hello World"
+
+print(d)
+
+print(d[4])
+
+//another way to create key or assigning key to new value
+var country = Dictionary<String, String>()
+country.updateValue("INDIA", forKey: "IND")
+country.updateValue("CHINA", forKey: "CHI")
+country.updateValue("BRAZIL", forKey: "BZL")
+country.updateValue("MAXICO", forKey: "MXO")
+
+print("-----------------------------------------")
+for i in country {
+    print(i)
+    print(i.key, i.value)
+}
+
+print("-----------------------------------------")
+for (k, v) in country
+{
+    print(k, v)
+}
+
+print("-----------------------------------------")
+for (_, v) in country{
+    print(v)
+}
+
+print("-----------------------------------------")
+for k in country.keys
+{
+    print(k)
+}
+
+print("-----------------------------------------")
+for v in country.values
+{
+    print(v)
+}
+//print(country)
+//delete all elements / clear
+d = [:]
+print(d.count)
+
+d.removeAll()
+
+
+
+
 
 
 
